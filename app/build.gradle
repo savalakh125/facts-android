@@ -10,7 +10,7 @@ android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
 
     defaultConfig {
-        applicationId "com.marvel.comics"
+        applicationId "com.dropbox.facts"
         minSdkVersion rootProject.ext.androidMinSdkVersion
         targetSdkVersion rootProject.ext.androidTargetSdkVersion
         versionCode 1

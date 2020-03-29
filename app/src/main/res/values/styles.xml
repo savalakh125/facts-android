@@ -5,7 +5,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
@@ -18,7 +17,7 @@
     <style name="DTextStyle.Title">
         <item name="android:textSize">@dimen/text_size_title</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:color">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorBlue</item>
     </style>
 
     <style name="DTextStyle.Body">

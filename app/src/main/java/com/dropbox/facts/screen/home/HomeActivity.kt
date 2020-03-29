@@ -3,7 +3,6 @@ package com.dropbox.facts.screen.home
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dropbox.facts.R
 import com.dropbox.facts.base.BaseActivity
@@ -38,6 +37,7 @@ class HomeActivity : BaseActivity<ActivityMainBinding, HomeViewModel>() {
         viewModel.errorToastLiveData.observe(this, Observer {
             Log.d(TAG, "errorToastLiveData received")
             showToast(it?.message)
+            binding.swipeToRefreshContainer.isRefreshing = false
         })
 
         viewModel.actionBarTitleLiveData.observe(this, Observer {
@@ -57,7 +57,6 @@ class HomeActivity : BaseActivity<ActivityMainBinding, HomeViewModel>() {
 
     private fun setupUI() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         adapter = FactsAdapter()
         binding.recyclerView.adapter = adapter
