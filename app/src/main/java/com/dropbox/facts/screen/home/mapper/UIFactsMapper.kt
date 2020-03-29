@@ -12,9 +12,14 @@ import com.dropbox.facts.screen.home.model.UIFacts
 class UIFactsMapper : UIBaseMapper<UIFacts, Facts>() {
 
     override fun getModel(domainModel: Facts): UIFacts {
-        return UIFacts(domainModel.title, domainModel.list.map {
+
+        val list = domainModel.list.map {
             UIFactItem(it.imageHref, it.title, it.description)
-        })
+        }.filter {
+            !(it.body.isEmpty() && it.image.isEmpty() && it.title.isEmpty())
+        }
+
+        return UIFacts(domainModel.title, list)
     }
 
 }
