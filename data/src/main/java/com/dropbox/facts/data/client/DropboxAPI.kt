@@ -11,7 +11,7 @@ import retrofit2.http.GET
  */
 interface DropboxAPI {
 
-    @GET("s/2iodh4vg0eortkl/facts.json")
+    @GET("/s/2iodh4vg0eortkl/facts.json")
     fun facts(): Observable<APIFacts>
 
 }
