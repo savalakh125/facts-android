@@ -1,3 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Following an 8 point Grid-->
+    <dimen name="space_1x">8dp</dimen>
+    <dimen name="space_2x">16dp</dimen>
+
+    <dimen name="match_constraints">0dp</dimen>
+
+
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_body">15sp</dimen>
+
 </resources>
