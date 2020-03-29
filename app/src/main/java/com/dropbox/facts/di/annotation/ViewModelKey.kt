@@ -1,4 +1,4 @@
-package com.marvel.comics.di.annotation
+package com.dropbox.facts.di.annotation
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

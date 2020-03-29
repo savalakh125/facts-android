@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dropbox.facts.di.DViewModelFactory
 import com.dropbox.facts.screen.home.HomeViewModel
-import com.marvel.comics.di.annotation.ViewModelKey
+import com.dropbox.facts.di.annotation.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -15,7 +15,7 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(HomeViewModel::class)
-    internal abstract fun bindMarvelCharactersMasterViewModel(viewModel: HomeViewModel): ViewModel
+    internal abstract fun bindHomeViewModel(viewModel: HomeViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: DViewModelFactory): ViewModelProvider.Factory
