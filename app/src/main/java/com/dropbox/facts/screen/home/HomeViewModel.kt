@@ -41,7 +41,7 @@ class HomeViewModel @Inject constructor(private val factsUseCase: FetchFactsUseC
 
     val errorToastLiveData = SingleLiveEvent<UIError?>()
 
-    val factsLiveData = MutableLiveData<List<UIFactItem>>()
+    val factsLiveData = MutableLiveData<List<UIFactItem>?>()
     val actionBarTitleLiveData = MutableLiveData<String?>()
 
     private val loadingHeading = stringResources.getString(R.string.loading)
